@@ -26,10 +26,20 @@ const CategoriesScreen = (props) => {
     )
 }
 
-CategoriesScreen.navigationOptions = navigationData => {
-    return {
-      headerTitle: "Categories By Ripon"
-    };
+CategoriesScreen.navigationOptions = navData => {
+  return {
+    headerTitle: 'Meal Categories',
+    headerLeft: (
+      <Text
+      title="Menu"
+      iconName="ios-menu"
+      onPress={() => {
+        navData.navigation.toggleDrawer();
+      }}
+    >Menu</Text>
+      
+    )
+  };
   };
 
 const styles = StyleSheet.create({

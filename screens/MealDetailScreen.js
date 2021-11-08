@@ -51,6 +51,14 @@ MealDetailScreen.navigationOptions = navigationData => {
   const selectedMeal = MEALS.find(meal => meal.id === mealId);
   return {
     headerTitle: selectedMeal.title,
+    headerRight: <View
+    onPress={() => {
+        console.log('Mark as favorite!');
+        }}>
+        <Text
+                
+                 >Favorit</Text>
+    </View>   ,
     // headerRight: (
     //   <HeaderButtons HeaderButtonComponent={HeaderButton}>
     //     <Item
